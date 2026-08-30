@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REVYU</title>
+    <title>REVYU - Timer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
 </head>
-
+</head>
 <body>
-
     <header>
         <nav class="bar">
             <a href="index.html" class="logo">REVYU</a>
@@ -25,17 +24,35 @@
         </nav>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Study Smarter,</h1>
-            <h1>Focus Better</h1>
+    <main class="timer-section">
+        <div class="timer-container">
+            <h1>Focus Time</h1>
 
-        <p>Stay focused, manage your time, and make every study session count.</p>
+            <div class="timer-modes">
+                <button class="mode-btn-active" data-mode="pomodoro">Pomodoro</button>
+                <button class="mode-btn" data-mode="short">Short Break</button>
+                <button class="mode-btn" data-mode="long">Long Break</button>
+            </div>
 
-            <a href="timer.html" class="hero-btn">Start Studying</a>
+            <div class="timer-display">
+                <span id="minutes">25</span>
+                <span>:</span>
+                <span id="seconds">00</span>
+            </div>
+
+        <div class="timer-controls">
+            <button id="start-btn">Start</button>
+            <button id="pause-btn">Pause</button>
+            <button id="reset-btn">Reset</button>
         </div>
-    </section>
 
+        <p class="session-count"> 
+            Session <span id="session">1</span> of 4 
+            </p>
 
+        </div>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,129 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #f8f7f4;
+    color: #222;
+}
+
+header {
+    width: 100%;
+}
+
+.bar {
+    height: 80px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: 'Rowdies', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #222;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #222;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.6;
+}
+
+
+.hero {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 8%;
+    background: linear-gradient(to bottom, rgba(236, 157, 67, 0.8), rgba(255, 255, 255, 0.8)), url('https://images.unsplash.com/photo-1612832021065-1f3e4c6b9d2e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-family: 'Rowdies', sans-serif;
+    font-size: clamp(50px, 8vw, 100px);
+    line-height: 0.95;
+    margin: 0;
+}
+
+.hero p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    margin: 30px auto;
+    max-width: 550px;
+    line-height: 1.6;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 14px 30px;
+    background-color: #222;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-family: 'Google Sans', sans-serif;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    transform: translateY(-3px);
+    opacity: 0.8;
+}
+
+.timer-section { min-height: calc(100vh - 80px); display: flex; justify-content: center; align-items: center; padding: 40px 20px; } .timer-container { width: 100%; max-width: 700px; text-align: center; } .timer-container h1 { font-family: 'Rowdies', sans-serif; font-size: 48px; margin-bottom: 30px; } /* Timer Modes */ .timer-modes { display: flex; justify-content: center; gap: 10px; margin-bottom: 35px; } .mode-btn { border: none; background: transparent; padding: 12px 20px; border-radius: 25px; font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 600; cursor: pointer; transition: 0.3s; } .mode-btn:hover { background-color: #e8e6e1; } 
+
+.mode-btn.active { 
+    background-color: #222; 
+    color: white; } 
+    .timer-display { 
+        font-family: 'Rowdies', sans-serif; 
+        font-size: clamp(100px, 18vw, 180px); 
+        line-height: 1; margin: 20px 0 40px; 
+        letter-spacing: 3px; } /* Timer Controls */ 
+
+    .timer-controls { display: flex;
+            justify-content: center; gap: 12px; }
+
+    .timer-controls button {
+        border: none;
+        padding: 14px 28px;
+        border-radius: 30px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.3s; }
+
+    #start-btn {
+    background-color: #222;
+    color: white; } #pause-btn, #reset-btn {
+    background-color: #e8e6e1; color: #222; } 
+    .timer-controls button:hover { transform: translateY(-3px); } 
+    .session-count { margin-top: 30px; font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 500; }
