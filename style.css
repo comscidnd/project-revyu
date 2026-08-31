@@ -126,4 +126,235 @@ header {
     color: white; } #pause-btn, #reset-btn {
     background-color: #e8e6e1; color: #222; } 
     .timer-controls button:hover { transform: translateY(-3px); } 
-    .session-count { margin-top: 30px; font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 500; }
+    .session-count { margin-top: 30px; font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 500; 
+    }
+
+    
+/* =========================
+   ABOUT PAGE
+========================= */
+
+.about-hero {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 8%;
+}
+
+.about-hero-content {
+    max-width: 900px;
+}
+
+.about-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.about-hero h1 {
+    font-family: 'Rowdies', sans-serif;
+    font-size: clamp(55px, 9vw, 110px);
+    line-height: 0.95;
+    margin-bottom: 35px;
+}
+
+.about-intro {
+    max-width: 600px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* About Sections */
+
+.about-section {
+    padding: 100px 8%;
+    border-top: 1px solid #ddd;
+}
+
+.about-content {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.about-heading h2 {
+    font-family: 'Rowdies', sans-serif;
+    font-size: clamp(35px, 5vw, 60px);
+    line-height: 1;
+}
+
+.about-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.about-text p {
+    margin-bottom: 25px;
+}
+
+
+/* How It Works */
+
+.how-section {
+    padding: 120px 8%;
+    background-color: #222;
+    color: white;
+}
+
+.how-header {
+    max-width: 1100px;
+    margin: auto;
+    margin-bottom: 70px;
+}
+
+.how-header h2 {
+    font-family: 'Rowdies', sans-serif;
+    font-size: clamp(40px, 6vw, 75px);
+    line-height: 1;
+}
+
+
+.steps {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.step {
+    border-top: 1px solid #666;
+    padding-top: 20px;
+}
+
+.step span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.step h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 22px;
+    margin: 35px 0 15px;
+}
+
+.step p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* Benefits */
+
+.benefits-section {
+    padding: 120px 8%;
+}
+
+.benefits-content {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.benefits-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.benefit {
+    display: flex;
+    gap: 25px;
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.benefit span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.benefit h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.benefit p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* Call To Action */
+
+.about-cta {
+    text-align: center;
+    padding: 140px 20px;
+    border-top: 1px solid #ddd;
+}
+
+.about-cta h2 {
+    font-family: 'Rowdies', sans-serif;
+    font-size: clamp(45px, 7vw, 85px);
+    line-height: 1;
+    margin-bottom: 40px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    .about-hero {
+        min-height: 65vh;
+        padding: 60px 8%;
+    }
+
+    .about-content,
+    .benefits-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .steps {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-section,
+    .benefits-section {
+        padding: 80px 8%;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .about-hero h1 {
+        font-size: 55px;
+    }
+
+}
+```
