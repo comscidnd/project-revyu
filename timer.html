@@ -1,58 +1,283 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REVYU - Timer</title>
+    <title>REVYU | Timer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
 </head>
-</head>
+
 <body>
+
     <header>
         <nav class="bar">
-            <a href="index.html" class="logo">REVYU</a>
+
+            <a href="index.html" class="logo">
+                REVYU
+            </a>
 
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="timer.html">Timer</a></li>
-                <li><a href="about.html">About</a></li>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="timer.html" class="active">Timer</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+
             </ul>
+
         </nav>
     </header>
 
-    <main class="timer-section">
-        <div class="timer-container">
-            <h1>Focus Time</h1>
+    <main class="timer-page">
+        <section class="timer-intro">
+
+            <div class="intro-text">
+
+                <p class="section-label">
+                    FOCUS TIMER
+                </p>
+
+                <h1>
+                    Ready to<br>
+                    focus?
+                </h1>
+
+                <p class="intro-description">
+                    Choose a session, focus on your task,
+                    and make your study time count.
+                </p>
+
+            </div>
+
+
+            <div class="today-progress">
+
+                <p class="section-label">
+                    TODAY
+                </p>
+
+                <div class="progress-item">
+
+                    <span class="progress-icon">
+                        🍅
+                    </span>
+
+                    <div>
+                        <strong id="completed-sessions">
+                            4
+                        </strong>
+
+                        <span>
+                            Sessions
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="progress-item">
+
+                    <span class="progress-icon">
+                        ⏱
+                    </span>
+
+                    <div>
+                        <strong id="focus-minutes">
+                            100
+                        </strong>
+
+                        <span>
+                            Focus Minutes
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="timer-area">
+
+            <div class="timer-card">
+
+                <p class="current-mode" id="current-mode">
+                    POMODORO
+                </p>
+
+
+                <!-- Timer -->
+
+                <div class="timer-display">
+
+                    <span id="minutes">
+                        25
+                    </span>
+
+                    <span class="timer-colon">
+                        :
+                    </span>
+
+                    <span id="seconds">
+                        00
+                    </span>
+
+                </div>
+
+                <div class="timer-controls">
+
+                    <button
+                        type="button"
+                        id="start-btn"
+                        class="start-btn">
+                        Start
+                    </button>
+
+                    <button
+                        type="button"
+                        id="pause-btn"
+                        class="secondary-btn">
+                        Pause
+                    </button>
+
+                    <button
+                        type="button"
+                        id="reset-btn"
+                        class="secondary-btn">
+                        Reset
+                    </button>
+
+                </div>
+
+            </div>
+
 
             <div class="timer-modes">
-                <button class="mode-btn-active" data-mode="pomodoro">Pomodoro</button>
-                <button class="mode-btn" data-mode="short">Short Break</button>
-                <button class="mode-btn" data-mode="long">Long Break</button>
+
+                <button
+                    type="button"
+                    class="mode-btn active"
+                    data-mode="pomodoro">
+
+                    <span>Pomodoro</span>
+                    <small>25 min</small>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="mode-btn"
+                    data-mode="short">
+
+                    <span>Short Break</span>
+                    <small>5 min</small>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="mode-btn"
+                    data-mode="long">
+
+                    <span>Long Break</span>
+                    <small>15 min</small>
+
+                </button>
+
             </div>
 
-            <div class="timer-display">
-                <span id="minutes">25</span>
-                <span>:</span>
-                <span id="seconds">00</span>
+            <div class="session-progress">
+
+                <div class="session-header">
+
+                    <span>
+                        Session
+                    </span>
+
+                    <span>
+                        <strong id="current-session">
+                            1
+                        </strong>
+                        of 4
+                    </span>
+
+                </div>
+
+                <div class="session-dots">
+                    <span class="session-dot active"></span>
+                    <span class="session-dot"></span>
+                    <span class="session-dot"></span>
+                    <span class="session-dot"></span>
+                </div>
+
             </div>
 
-        <div class="timer-controls">
-            <button id="start-btn">Start</button>
-            <button id="pause-btn">Pause</button>
-            <button id="reset-btn">Reset</button>
-        </div>
+        </section>
 
-        <p class="session-count"> 
-            Session <span id="session">1</span> of 4 
-            </p>
+        <section class="task-section">
 
-        </div>
+            <div class="task-header">
+
+                <div>
+
+                    <p class="section-label">
+                        MY TASK
+                    </p>
+
+                    <h2>
+                        What are you<br>
+                        working on?
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="task-input-container">
+
+                <input
+                    type="text"
+                    id="task-input"
+                    placeholder="e.g. Review Chapter 2"
+                    autocomplete="off">
+
+                <button
+                    type="button"
+                    id="add-task-btn"
+                    aria-label="Add task">
+
+                    +
+
+                </button>
+
+            </div>
+
+
+            <div
+                class="task-list"
+                id="task-list">
+            </div>
+
+        </section>
+
+
     </main>
 
     <script src="script.js"></script>
+
 </body>
+
 </html>

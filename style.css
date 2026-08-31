@@ -97,49 +97,496 @@ header {
     opacity: 0.8;
 }
 
-.timer-section { min-height: calc(100vh - 80px); display: flex; justify-content: center; align-items: center; padding: 40px 20px; } .timer-container { width: 100%; max-width: 700px; text-align: center; } .timer-container h1 { font-family: 'Rowdies', sans-serif; font-size: 48px; margin-bottom: 30px; } /* Timer Modes */ .timer-modes { display: flex; justify-content: center; gap: 10px; margin-bottom: 35px; } .mode-btn { border: none; background: transparent; padding: 12px 20px; border-radius: 25px; font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 600; cursor: pointer; transition: 0.3s; } .mode-btn:hover { background-color: #e8e6e1; } 
 
-.mode-btn.active { 
-    background-color: #222; 
-    color: white; } 
-    .timer-display { 
-        font-family: 'Rowdies', sans-serif; 
-        font-size: clamp(100px, 18vw, 180px); 
-        line-height: 1; margin: 20px 0 40px; 
-        letter-spacing: 3px; } /* Timer Controls */ 
 
-    .timer-controls { display: flex;
-            justify-content: center; gap: 12px; }
+.timer-page {
+    min-height: calc(100vh - 80px);
+    padding: 70px 8% 100px;
+}
 
-    .timer-controls button {
-        border: none;
-        padding: 14px 28px;
-        border-radius: 30px;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 14px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: 0.3s; }
 
-    #start-btn {
+.timer-intro {
+    max-width: 1200px;
+    margin: 0 auto 60px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    gap: 40px;
+}
+
+.section-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+}
+
+.intro-text h1 {
+    font-family: 'Rowdies', sans-serif;
+    font-size: clamp(55px, 7vw, 90px);
+    line-height: 0.9;
+
+    margin: 0 0 25px;
+}
+
+.intro-description {
+    max-width: 420px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+
+    margin: 0;
+}
+
+
+/* =================================
+   TODAY'S PROGRESS
+================================= */
+
+.today-progress {
+    min-width: 220px;
+
+    padding: 25px 0;
+
+    border-top: 1px solid #d8d6d1;
+}
+
+.progress-item {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+.progress-icon {
+    font-size: 22px;
+}
+
+.progress-item div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.progress-item strong {
+    font-family: 'Outfit', sans-serif;
+    font-size: 24px;
+}
+
+.progress-item span:not(.progress-icon) {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+
+/* =================================
+   TIMER AREA
+================================= */
+
+.timer-area {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+
+/* =================================
+   TIMER CARD
+================================= */
+
+.timer-card {
     background-color: #222;
-    color: white; } #pause-btn, #reset-btn {
-    background-color: #e8e6e1; color: #222; } 
-    .timer-controls button:hover { transform: translateY(-3px); } 
-    .session-count { margin-top: 30px; font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 500; 
+    color: white;
+
+    border-radius: 25px;
+
+    padding: 55px 40px 60px;
+
+    text-align: center;
+}
+
+.current-mode {
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin: 0 0 25px;
+}
+
+
+/* =================================
+   TIMER DISPLAY
+================================= */
+
+.timer-display {
+    font-family: 'Rowdies', sans-serif;
+
+    font-size: clamp(100px, 17vw, 180px);
+
+    line-height: 0.9;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 45px;
+}
+
+.timer-colon {
+    position: relative;
+    top: -5px;
+}
+
+
+/* =================================
+   TIMER CONTROLS
+================================= */
+
+.timer-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.timer-controls button {
+    border: none;
+
+    padding: 13px 25px;
+
+    border-radius: 30px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.start-btn {
+    background-color: white;
+    color: #222;
+}
+
+.secondary-btn {
+    background-color: #3b3b3b;
+    color: white;
+}
+
+.timer-controls button:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =================================
+   TIMER MODES
+================================= */
+
+.timer-modes {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+.mode-btn {
+    border: 1px solid #d8d6d1;
+
+    background-color: transparent;
+
+    min-width: 150px;
+
+    padding: 15px 20px;
+
+    border-radius: 15px;
+
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+
+    transition: 0.3s;
+}
+
+.mode-btn span {
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.mode-btn small {
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 10px;
+}
+
+.mode-btn:hover {
+    background-color: #eeeae4;
+}
+
+.mode-btn.active {
+    background-color: #222;
+    color: white;
+
+    border-color: #222;
+}
+
+
+/* =================================
+   SESSION PROGRESS
+================================= */
+
+.session-progress {
+    max-width: 500px;
+
+    margin: 40px auto 0;
+}
+
+.session-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 12px;
+}
+
+.session-header strong {
+    font-weight: 700;
+}
+
+
+/* Session dots */
+
+.session-dots {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+}
+
+.session-dot {
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background-color: #d8d6d1;
+
+    transition: 0.3s;
+}
+
+.session-dot.active {
+    background-color: #222;
+
+    transform: scale(1.2);
+}
+
+
+/* =================================
+   TASK SECTION
+================================= */
+
+.task-section {
+    max-width: 850px;
+
+    margin: 110px auto 0;
+
+    padding-top: 60px;
+
+    border-top: 1px solid #d8d6d1;
+}
+
+.task-header {
+    margin-bottom: 30px;
+}
+
+.task-header h2 {
+    font-family: 'Rowdies', sans-serif;
+
+    font-size: clamp(35px, 5vw, 55px);
+
+    line-height: 1;
+
+    margin: 0;
+}
+
+
+
+.task-input-container {
+    display: flex;
+
+    align-items: center;
+
+    border-bottom: 2px solid #222;
+
+    padding-bottom: 10px;
+}
+
+.task-input-container input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 15px;
+
+    padding: 12px 0;
+}
+
+.task-input-container input::placeholder {
+    color: #999;
+}
+
+.task-input-container button {
+    width: 40px;
+    height: 40px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background-color: #222;
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s;
+}
+
+.task-input-container button:hover {
+    transform: rotate(90deg);
+}
+
+
+/* =================================
+   TASK LIST
+================================= */
+
+.task-list {
+    margin-top: 20px;
+}
+
+.task-item {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid #d8d6d1;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 14px;
+}
+
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 768px) {
+
+    .timer-page {
+        padding: 50px 6% 80px;
     }
 
+    .timer-intro {
+        flex-direction: column;
 
-/* =========================
-   ABOUT PAGE
-========================= */
+        align-items: flex-start;
+
+        margin-bottom: 40px;
+    }
+
+    .today-progress {
+        width: 100%;
+    }
+
+    .timer-card {
+        padding: 45px 20px 50px;
+    }
+
+    .timer-modes {
+        flex-direction: column;
+    }
+
+    .mode-btn {
+        width: 100%;
+    }
+
+    .timer-controls {
+        flex-wrap: wrap;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .timer-page {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .intro-text h1 {
+        font-size: 55px;
+    }
+
+    .timer-display {
+        font-size: 85px;
+    }
+
+    .timer-controls button {
+        padding: 12px 20px;
+    }
+
+}
+
+
 
 .about-hero {
     min-height: 75vh;
     display: flex;
     align-items: center;
     padding: 80px 8%;
+    background: linear-gradient(to bottom, rgba(236, 157, 67, 0.8), rgba(255, 255, 255, 0.8)), url('https://images.unsplash.com/photo-1612832021065-1f3e4c6b9d2e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
 }
+
 
 .about-hero-content {
     max-width: 900px;
@@ -167,8 +614,6 @@ header {
     line-height: 1.7;
 }
 
-
-/* About Sections */
 
 .about-section {
     padding: 100px 8%;
@@ -201,7 +646,6 @@ header {
 }
 
 
-/* How It Works */
 
 .how-section {
     padding: 120px 8%;
@@ -255,8 +699,6 @@ header {
 }
 
 
-/* Benefits */
-
 .benefits-section {
     padding: 120px 8%;
 }
@@ -309,6 +751,7 @@ header {
     text-align: center;
     padding: 140px 20px;
     border-top: 1px solid #ddd;
+    background: linear-gradient(to bottom, rgba(236, 157, 67, 0.8), rgba(255, 255, 255, 0.8)), url('https://images.unsplash.com/photo-1612832021065-1f3e4c6b9d2e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
 }
 
 .about-cta h2 {
@@ -317,9 +760,6 @@ header {
     line-height: 1;
     margin-bottom: 40px;
 }
-
-
-/* Responsive */
 
 @media (max-width: 768px) {
 
