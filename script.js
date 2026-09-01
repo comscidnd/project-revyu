@@ -320,10 +320,7 @@ taskInput.addEventListener(
 
 
 updateDisplay();
-
 updateModeDisplay();
-
 updateActiveMode();
-
 updateSessionDots();
 

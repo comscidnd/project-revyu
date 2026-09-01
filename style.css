@@ -13,6 +13,7 @@ body {
 
 header {
     width: 100%;
+    background-color: #222;
 }
 
 .bar {
@@ -28,7 +29,7 @@ header {
     font-size: 28px;
     font-weight: 700;
     text-decoration: none;
-    color: #222;
+    color: #ffff;
 }
 
 .nav-links {
@@ -39,7 +40,7 @@ header {
 
 .nav-links a {
     text-decoration: none;
-    color: #222;
+    color: #ffff;
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     font-weight: 500;
@@ -50,53 +51,564 @@ header {
     opacity: 0.6;
 }
 
-
 .hero {
     min-height: calc(100vh - 80px);
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 60px 8%;
+
     display: flex;
+
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 50px 8%;
-    background: linear-gradient(to bottom, rgba(236, 157, 67, 0.8), rgba(255, 255, 255, 0.8)), url('https://images.unsplash.com/photo-1612832021065-1f3e4c6b9d2e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+
+    justify-content: space-between;
+
+    gap: 80px;
 }
+
+
 
 .hero-content {
-    max-width: 800px;
+    max-width: 600px;
 }
 
-.hero h1 {
-    font-family: 'Rowdies', sans-serif;
-    font-size: clamp(50px, 8vw, 100px);
-    line-height: 0.95;
-    margin: 0;
-}
-
-.hero p {
+.hero-label {
     font-family: 'Montserrat', sans-serif;
-    font-size: 17px;
-    margin: 30px auto;
-    max-width: 550px;
-    line-height: 1.6;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-family: 'Rowdies', sans-serif;
+
+    font-size: clamp(55px, 7vw, 100px);
+
+    line-height: 0.95;
+
+    margin: 0 0 30px;
+}
+
+.hero-description {
+    max-width: 420px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    margin-bottom: 35px;
 }
 
 .hero-btn {
     display: inline-block;
-    padding: 14px 30px;
+
+    padding: 15px 28px;
+
     background-color: #222;
+
     color: white;
-    text-decoration: none;
+
     border-radius: 30px;
-    font-family: 'Google Sans', sans-serif;
-    font-weight: 600;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
     transition: 0.3s;
 }
 
 .hero-btn:hover {
     transform: translateY(-3px);
-    opacity: 0.8;
 }
 
+
+.timer-preview {
+    width: 320px;
+    min-height: 420px;
+
+    background-color: #333333;
+    color: white;
+
+    border-radius: 30px;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 15px;
+
+    box-shadow: 20px 20px 0 #e5e1db;
+}
+
+.pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 10px 0;
+}
+
+.pic img {
+    width: 160px;
+    height: auto;
+
+    object-fit: contain;
+}
+
+.preview-label {
+    margin: 0;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.preview-time {
+    font-family: 'Rowdies', sans-serif;
+    font-size: 70px;
+
+    color: #ff7a00;
+
+    text-align: center;
+
+    margin: 5px 0;
+}
+
+.preview-start {
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background-color: white;
+
+    color: #222;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    margin-top: auto;
+
+    transition: 0.3s;
+}
+
+.preview-start:hover {
+    transform: scale(1.03);
+}
+
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: auto;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 70px 8%;
+
+        gap: 60px;
+    }
+
+    .timer-preview {
+        width: 100%;
+
+        max-width: 430px;
+
+        align-self: center;
+    }
+}
+
+/* =================================
+   WHY REVYU SECTION
+================================= */
+
+.why-revyu {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    padding: 120px 8%;
+}
+
+
+/* HEADER */
+
+.why-header {
+    max-width: 650px;
+
+    margin-bottom: 70px;
+}
+
+.section-label {
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+}
+
+.why-header h2 {
+    font-family: 'Rowdies', sans-serif;
+
+    font-size: clamp(40px, 5vw, 65px);
+
+    line-height: 1;
+
+    margin-bottom: 25px;
+}
+
+.why-description {
+    max-width: 500px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* CARDS */
+
+.why-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.why-card {
+    min-height: 300px;
+
+    padding: 35px;
+
+    border: 1px solid #d8d6d1;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    transition: 0.3s;
+}
+
+.why-card:hover {
+    transform: translateY(-8px);
+
+    background-color: #222;
+
+    color: white;
+}
+
+
+.why-number {
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    color: #ff7a00;
+}
+
+
+.why-card h3 {
+    font-family: 'Rowdies', sans-serif;
+
+    font-size: 32px;
+
+    margin: auto 0 15px;
+}
+
+
+.why-card p {
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    margin: 0;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .why-revyu {
+        padding: 80px 8%;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .why-card {
+        min-height: 220px;
+    }
+
+}
+
+/* =================================
+   HOW IT WORKS SECTION
+================================= */
+
+.how-it-works {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 8%;
+}
+
+
+/* HEADER */
+
+.how-header {
+    max-width: 600px;
+    margin-bottom: 70px;
+}
+
+.how-header h2 {
+    font-family: 'Rowdies', sans-serif;
+    font-size: clamp(40px, 5vw, 65px);
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.how-header p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* STEPS */
+
+.steps-container {
+    border-top: 1px solid #d8d6d1;
+}
+
+
+.step {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+
+    gap: 30px;
+
+    padding: 35px 0;
+
+    border-bottom: 1px solid #d8d6d1;
+
+    transition: 0.3s;
+}
+
+.step:hover {
+    padding-left: 20px;
+}
+
+
+/* NUMBER */
+
+.step-number {
+    font-family: 'Rowdies', sans-serif;
+    font-size: 40px;
+    color: #ff7a00;
+}
+
+
+/* CONTENT */
+
+.step-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 40px;
+}
+
+.step-content h3 {
+    font-family: 'Rowdies', sans-serif;
+    font-size: 30px;
+
+    margin: 0;
+
+    min-width: 220px;
+}
+
+.step-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+
+    max-width: 400px;
+
+    margin: 0;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .how-it-works {
+        padding: 80px 8%;
+    }
+
+    .step {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .step-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .step-content h3 {
+        min-width: auto;
+    }
+
+}
+
+/* =================================
+   MOTIVATIONAL QUOTE
+================================= */
+
+.quote-section {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    padding: 120px 8%;
+
+    text-align: center;
+
+    background-color: #222;
+    color: white;
+
+    border-radius: 30px;
+}
+
+
+.quote-label {
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #ff7a00;
+
+    margin-bottom: 30px;
+}
+
+
+.quote-section h2 {
+    max-width: 850px;
+
+    margin: 0 auto 30px;
+
+    font-family: 'Rowdies', sans-serif;
+
+    font-size: clamp(35px, 5vw, 65px);
+
+    line-height: 1.2;
+}
+
+
+.quote-author {
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 14px;
+
+    color: #cccccc;
+}
+
+/* =================================
+   FINAL CTA SECTION
+================================= */
+
+.final-cta {
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 140px 8%;
+
+    text-align: center;
+}
+
+
+.final-cta h2 {
+    font-family: 'Rowdies', sans-serif;
+
+    font-size: clamp(45px, 6vw, 75px);
+
+    line-height: 1;
+
+    margin: 25px 0;
+}
+
+
+.final-cta p:not(.section-label) {
+    max-width: 500px;
+
+    margin: 0 auto 35px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    color: #666;
+}
+
+
+/* CTA BUTTON */
+
+.final-cta .hero-btn {
+    padding: 17px 35px;
+
+    font-size: 12px;
+}
 
 
 .timer-page {
@@ -197,12 +709,10 @@ header {
 }
 
 
-/* =================================
-   TIMER CARD
-================================= */
+
 
 .timer-card {
-    background-color: #222;
+    background-color: #d98d1c;
     color: white;
 
     border-radius: 25px;
