@@ -26,7 +26,7 @@ const taskInput = document.getElementById("task-input");
 const addTaskButton = document.getElementById("add-task-btn");
 const taskList = document.getElementById("task-list");
 
-// Timer logic only runs on pages that actually have the timer UI
+
 if (minutesDisplay && startButton) {
 
     function updateDisplay() {
