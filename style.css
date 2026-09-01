@@ -106,6 +106,7 @@ header {
         padding: 30px 0;
 
         background-color: #222;
+        z-index: 999;
     }
 
     .nav-links.show {
