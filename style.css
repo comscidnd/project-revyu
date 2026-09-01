@@ -767,6 +767,160 @@ header {
 
 }
 
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+.hero-content {
+    animation: fadeUp 0.8s ease forwards;
+}
+
+
+
+.timer-preview {
+    animation: fadeUp 1s ease forwards;
+}
+
+
+.why-card {
+    animation: fadeUp 0.8s ease forwards;
+}
+
+
+.step {
+    transition: 0.3s ease;
+}
+
+.hero-btn,
+.preview-start {
+    transition: 0.3s ease;
+}
+
+/* =================================
+   TABLET AND MOBILE RESPONSIVENESS
+================================= */
+
+@media (max-width: 768px) {
+
+    /* NAVIGATION */
+
+    .bar {
+        padding: 20px 6%;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+    }
+
+
+    /* HERO SECTION */
+
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+
+        padding: 70px 8%;
+        gap: 50px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(45px, 12vw, 70px);
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+
+    /* TIMER PREVIEW */
+
+    .timer-preview {
+        width: 100%;
+        max-width: 320px;
+
+        min-height: 420px;
+
+        align-self: center;
+
+        box-sizing: border-box;
+    }
+
+
+    /* WHY REVYU */
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-card {
+        min-height: 220px;
+    }
+
+
+    /* HOW IT WORKS */
+
+    .step {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .step-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+
+    /* QUOTE SECTION */
+
+    .quote-section {
+        margin-left: 5%;
+        margin-right: 5%;
+
+        padding: 80px 8%;
+    }
+
+
+    /* FINAL CTA */
+
+    .final-cta {
+        padding: 100px 8%;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .footer-links {
+        gap: 40px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
+
+
+    /* TIMER PAGE */
+
 
 .timer-page {
     min-height: calc(100vh - 80px);
