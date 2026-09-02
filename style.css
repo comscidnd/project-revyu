@@ -1682,3 +1682,284 @@ header {
     }
 
 }
+
+
+/* =================================
+   SETTINGS BUTTON + PANEL
+================================= */
+
+.timer-card {
+    position: relative;
+}
+
+.settings-btn {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+
+    background: transparent;
+    border: none;
+
+    font-size: 20px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    color: white;
+
+    transition: 0.3s;
+}
+
+.settings-btn:hover {
+    transform: rotate(60deg);
+}
+
+.settings-overlay {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 1000;
+}
+
+.settings-overlay.show {
+    display: flex;
+}
+
+.settings-panel {
+    width: 100%;
+    max-width: 380px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.settings-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+.settings-header h3 {
+    font-family: 'Rowdies', sans-serif;
+    font-size: 24px;
+}
+
+.settings-close {
+    background: none;
+    border: none;
+
+    font-size: 26px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    color: #222;
+}
+
+.settings-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    margin-bottom: 18px;
+}
+
+.settings-group label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.settings-group input[type="number"] {
+    padding: 12px 14px;
+
+    border: 1px solid #d8d6d1;
+    border-radius: 12px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.settings-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 16px;
+
+    font-size: 14px;
+}
+
+.settings-toggle input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+
+    cursor: pointer;
+
+    accent-color: #222;
+}
+
+.settings-save-btn {
+    width: 100%;
+    margin-top: 10px;
+
+    padding: 15px;
+
+    border: none;
+    border-radius: 30px;
+
+    background-color: #222;
+    color: white;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.settings-save-btn:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =================================
+   TASK HEADER / COUNT
+================================= */
+
+.task-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.task-count {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: #888;
+}
+
+
+/* =================================
+   TASK ITEM (checkbox / edit / delete)
+================================= */
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.task-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+
+    cursor: pointer;
+
+    accent-color: #222;
+}
+
+.task-item .task-text {
+    flex: 1;
+
+    outline: none;
+
+    border-radius: 6px;
+
+    padding: 2px 4px;
+
+    margin: -2px -4px;
+}
+
+.task-item .task-text[contenteditable="true"] {
+    background-color: #f0efec;
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+.task-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.task-actions button {
+    background: none;
+    border: none;
+
+    font-size: 16px;
+
+    color: #999;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.task-actions button:hover {
+    color: #222;
+}
+
+
+/* =================================
+   TOAST NOTIFICATION
+================================= */
+
+.toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+
+    transform: translateX(-50%) translateY(20px);
+
+    background-color: #222;
+    color: white;
+
+    padding: 14px 26px;
+
+    border-radius: 30px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+
+    opacity: 0;
+
+    transition: 0.3s ease;
+
+    z-index: 2000;
+
+    max-width: 90%;
+    text-align: center;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}

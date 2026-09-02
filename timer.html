@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -124,6 +123,14 @@
         <section class="timer-area">
 
             <div class="timer-card">
+
+                <button
+                    type="button"
+                    id="settings-btn"
+                    class="settings-btn"
+                    aria-label="Open settings">
+                    ⚙️
+                </button>
 
                 <p class="current-mode" id="current-mode">
                     POMODORO
@@ -257,6 +264,10 @@
 
                 </div>
 
+                <p class="task-count" id="task-count">
+                    0 of 0 completed
+                </p>
+
             </div>
 
 
@@ -289,6 +300,65 @@
 
 
     </main>
+
+
+    <!-- Settings Modal -->
+    <div class="settings-overlay" id="settings-overlay">
+
+        <div class="settings-panel">
+
+            <div class="settings-header">
+                <h3>Settings</h3>
+                <button
+                    type="button"
+                    id="settings-close"
+                    class="settings-close"
+                    aria-label="Close settings">
+                    &times;
+                </button>
+            </div>
+
+            <div class="settings-group">
+                <label for="focus-duration">Focus time (minutes)</label>
+                <input type="number" id="focus-duration" min="1" max="180" value="25">
+            </div>
+
+            <div class="settings-group">
+                <label for="short-duration">Short break (minutes)</label>
+                <input type="number" id="short-duration" min="1" max="60" value="5">
+            </div>
+
+            <div class="settings-group">
+                <label for="long-duration">Long break (minutes)</label>
+                <input type="number" id="long-duration" min="1" max="60" value="15">
+            </div>
+
+            <div class="settings-toggle">
+                <label for="auto-start-breaks">Auto-start breaks</label>
+                <input type="checkbox" id="auto-start-breaks">
+            </div>
+
+            <div class="settings-toggle">
+                <label for="auto-start-sessions">Auto-start next session</label>
+                <input type="checkbox" id="auto-start-sessions">
+            </div>
+
+            <div class="settings-toggle">
+                <label for="sound-toggle">Sound notification</label>
+                <input type="checkbox" id="sound-toggle" checked>
+            </div>
+
+            <button
+                type="button"
+                id="settings-save"
+                class="settings-save-btn">
+                Save Settings
+            </button>
+
+        </div>
+
+    </div>
+
 
     <script src="script.js"></script>
 
